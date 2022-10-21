@@ -3,7 +3,7 @@ import { getFirestore } from "firebase-admin/firestore"
 
 import serviceAccount from "../secrets.js"
 
-export function dbConnect() {
+export default function dbConnect() {
     if (!getApps().length) {
         initalizeApp({
             credential: cert(serviceAccount)
